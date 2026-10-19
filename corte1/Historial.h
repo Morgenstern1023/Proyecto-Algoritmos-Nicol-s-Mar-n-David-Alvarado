@@ -1,6 +1,7 @@
 #pragma once
 #include <iostream>
 #include <string>
+#include "Disponibilidad.h"
 
 using namespace std;
 
@@ -16,11 +17,21 @@ public:
 
 class ListaDobleHistorial {
 private:
-// Punteros para el primer y último nodo de la lista
+    struct NodoSnapshot {
+        MatrizDisponibilidad::SnapshotEstado data;
+        NodoSnapshot* siguiente;
+
+        explicit NodoSnapshot(const MatrizDisponibilidad::SnapshotEstado& estado);
+        ~NodoSnapshot(); 
+    };
+
+    // Punteros para el primer y último nodo de la lista
     //head: primer elemento
     NodoDoble* head;
     //tail: último elemento
     NodoDoble* tail;
+    NodoSnapshot* cima;
+    MatrizDisponibilidad* matrizActual;
 
 public:
     // Constructor y destructor de la lista 
@@ -30,4 +41,16 @@ public:
     void agregarAccion(string accion);
     void navegarAdelante();
     void navegarAtras();
+
+    void enlazarMatriz(MatrizDisponibilidad* matriz);
+    void guardarSnapshotActual();
+    bool deshacerUltimoCambio();
+    bool haySnapshots() const;
+
+private:
+    // Métodos auxiliares para la navegación recursiva
+    void navegarAdelante(NodoDoble* temp);
+    void navegarAtras(NodoDoble* temp);
+    void pushSnapshot(const MatrizDisponibilidad::SnapshotEstado& estado);
+    bool popSnapshot(MatrizDisponibilidad& matriz);
 };
