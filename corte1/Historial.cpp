@@ -1,4 +1,5 @@
 #include "Historial.h"
+#include "Disponibilidad.h"
 
 //los dos puntos es como cuando usamos std, y no usamos using namespace std; para no tener que escribir std::cout, std::string, etc.
 
@@ -19,25 +20,104 @@ NodoDoble::NodoDoble(string act) {
     this->prev = nullptr;
 }
 
+ListaDobleHistorial::NodoSnapshot::NodoSnapshot(const MatrizDisponibilidad::SnapshotEstado& estado)
+    : data(estado), siguiente(nullptr) {}
+
+ListaDobleHistorial::NodoSnapshot::~NodoSnapshot() {
+    // `data` destruye los arreglos deep-copy de este snapshot.
+}
+
 ListaDobleHistorial::ListaDobleHistorial() {
     // Inicializar los punteros head y tail a nullptr
     head = nullptr;
     tail = nullptr;
+    cima = nullptr;
+    matrizActual = nullptr;
 }
 
 ListaDobleHistorial::~ListaDobleHistorial() {
     // Liberar memoria de todos los nodos de la lista
     NodoDoble* actual = head;
-    // Recorrer la lista y eliminar cada nodo
     while (actual != nullptr) {
-        // Guardar el siguiente nodo antes de eliminar el actual
         NodoDoble* siguiente = actual->next;
-        // Eliminar el nodo actual
         delete actual;
-        // Avanzar al siguiente nodo
         actual = siguiente;
     }
+
+    while (cima != nullptr) {
+        NodoSnapshot* temp = cima;
+        cima = cima->siguiente;
+        delete temp;
+    }
 }
+
+void ListaDobleHistorial::enlazarMatriz(MatrizDisponibilidad* matriz) {
+    // Enlazar la matriz de disponibilidad actual con la lista de snapshots.
+    matrizActual = matriz;
+}
+
+void ListaDobleHistorial::pushSnapshot(const MatrizDisponibilidad::SnapshotEstado& estado) {
+    // crea nuevo snapshot 
+    NodoSnapshot* nuevo = new NodoSnapshot(estado);
+    // Enlazar el nuevo snapshot con la cima actual de la pila.
+    nuevo->siguiente = cima;
+    // actualiza 
+    cima = nuevo;
+}
+
+bool ListaDobleHistorial::popSnapshot(MatrizDisponibilidad& matriz) {
+    //revisa si hay snapshots disponibles antes de intentar hacer pop.
+    if (cima == nullptr) {
+        cout << "No hay snapshots para deshacer." << endl;
+        return false;
+    }
+
+    NodoSnapshot* temp = cima;
+    // Restaurar el estado de la matriz desde el snapshot en la cima de la pila.
+    matriz.restaurarEstado(temp->data);
+    // Actualiza cima de la pila al siguiente snapshot.
+    cima = temp->siguiente;
+    // Liberar memoria del snapshot que se acaba de usar.
+    delete temp;
+    return true;
+}
+
+void ListaDobleHistorial::guardarSnapshotActual() {
+    // si no hay matriz enlazada, no se puede guardar el snapshot.
+    if (matrizActual == nullptr) {
+        cout << "No hay matriz enlazada para guardar el snapshot." << endl;
+        return;
+    }
+
+    // Captura el estado actual de la matriz y guardarlo en la pila de snapshots.
+    pushSnapshot(matrizActual->capturarEstado());
+    cout << "[Snapshot] Estado real del sistema guardado en la pila." << endl;
+}
+
+bool ListaDobleHistorial::deshacerUltimoCambio() {
+    // Verifica si hay una matriz enlazada antes de intentar deshacer.
+    if (matrizActual == nullptr) {
+        cout << "No hay una matriz enlazada para deshacer." << endl;
+        return false;
+    }
+    // Verifica si hay snapshots disponibles antes de intentar deshacer.
+    if (cima == nullptr) {
+        cout << "No hay cambios guardados para deshacer." << endl;
+        return false;
+    }
+
+    // Intenta hacer pop del snapshot más reciente y restaurar el estado de la matriz.
+    bool ok = popSnapshot(*matrizActual);
+    if (ok) {
+        cout << "[Undo] Estado del sistema restaurado correctamente." << endl;
+    }
+    return ok;
+}
+
+bool ListaDobleHistorial::haySnapshots() const {
+    return cima != nullptr;
+}
+
 // Método para agregar una acción al historial
 void ListaDobleHistorial::agregarAccion(string accion) {
     // Crear un nuevo nodo con la acción proporcionada
@@ -59,34 +139,42 @@ void ListaDobleHistorial::agregarAccion(string accion) {
 // Método para navegar hacia adelante en el historial (desde el nodo más antiguo hasta el más reciente)
 
 void ListaDobleHistorial::navegarAdelante() {
+    //si está vacio, mostrar mensaje y salir
+    if (head == nullptr) {
+        cout << "El historial esta vacio." << endl;
+        return;
+    }
+    //si no, llama a la función que imprime la acción almacenada en el nodo actual y llama recursivamente a la función con el nodo siguiente
     cout << "\n[Historial: Mas antiguo -> Mas reciente]" << endl;
-    // Comenzar desde el nodo head (el más antiguo)
-    NodoDoble* temp = head;
-    //si está vacio, mostrar mensaje y salir
-    if (temp == nullptr) {
-        cout << "El historial esta vacio." << endl;
-        return;
-    }
-    //si no, recorre cada helemento de la lista e imprime la acción almacenada en cada nodo desde el primero hasta el último
-    while (temp != nullptr) {
-        cout << " -> " << temp->accion << endl;
-        temp = temp->next;
-    }
+    navegarAdelante(head);
 }
-// Método para navegar hacia atrás en el historial (desde el nodo más reciente hasta el más antiguo)
-//para cumplir con poder deshacer accion (último movimiento hecho))
-void ListaDobleHistorial::navegarAtras() {
-    cout << "\n[Historial: Mas reciente -> Mas antiguo]" << endl;
-    // Comenzar desde el nodo tail (el más reciente)
-    NodoDoble* temp = tail;
-    //si está vacio, mostrar mensaje y salir
+
+void ListaDobleHistorial::navegarAdelante(NodoDoble* temp) {
     if (temp == nullptr) {
+        return;
+    }
+    cout << " -> " << temp->accion << endl;
+    navegarAdelante(temp->next);
+}
+//desde el más reciente hasta el más antiguo
+//para cumplir con poder deshacer accion (último movimiento hecho))
+//emplear recursión para navegar hacia atrás en el historial
+void ListaDobleHistorial::navegarAtras() {
+    //si está vacio, mostrar mensaje y salir
+    if (tail == nullptr) {
         cout << "El historial esta vacio." << endl;
         return;
     }
-    //si no, recorre cada elemento de la lista e imprime la acción almacenada en cada nodo desde el último hasta el primero
-    while (temp != nullptr) {
-        cout << " -> " << temp->accion << endl;
-        temp = temp->prev;
+    //si no, llama a la función que imprime a la acción almacenada en el nodo actual y llama recursivamente a la función con el nodo previo
+    cout << "\n[Historial: Mas reciente -> Mas antiguo]" << endl;
+    navegarAtras(tail);
+}
+
+
+void ListaDobleHistorial::navegarAtras(NodoDoble* temp) {
+    if (temp == nullptr) {
+        return;
     }
+    cout << " -> " << temp->accion << endl;
+    navegarAtras(temp->prev);
 }
