@@ -6,6 +6,12 @@ Aplicación offline en **C++17** con API REST local (`cpp-httplib`) e interfaz w
 - Oscar David Alvarado Navarrete (DA)
 - Nicolás Marín Quintero (NM)
 
+**Docente / Product Owner:** Tatiana Cabrera Vargas  
+**Institución:** Universidad del Rosario — Facultad de Matemáticas e Ingeniería (2026)
+
+---
+M)
+
 ## Requisitos en Arch Linux
 ```bash
 sudo pacman -S --needed base-devel openssl nlohmann-json curl
@@ -27,3 +33,25 @@ make clean && make && make run
   ```bash
   ./bin/crai_server --unlock ADMIN01
   ```
+
+# Sistema de Gestión de Recursos y Préstamos — CRAI Universidad del Rosario
+
+Aplicación **100% offline** en **C++17** para la gestión integral de préstamos, inventario, usuarios, sanciones, categorías jerárquicas, disponibilidad semanal y red de sedes del CRAI de la Universidad del Rosario.
+
+Implementa desde cero las **10 estructuras de datos de la asignatura sin contenedores STL** (`Nodo`, `VectorDinamico`, `ListaSimple`, `ListaDoble`, `Pila`, `Cola`, `TablaHash`, `ArbolAVL`, `ArbolCategorias` LCRS, `MatrizDisponibilidad` 3D y `GrafoSedes` BFS/DFS), cumpliendo los **29 Requerimientos Funcionales (RQF)**, persistencia atómica en **7 archivos CSV** (catálogo base de **501 recursos**), seguridad con **OpenSSL** (`PBKDF2-HMAC-SHA256`), interfaz web local (`cpp-httplib`, cero CDNs) y **0 fugas de memoria** verificadas con `AddressSanitizer` / `UBSan` y GitHub Actions.
+
+## Estructura del Proyecto
+
+```text
+Proyecto_CRAI_UR/
+├── dependencias/          # 7 archivos CSV locales (501 recursos, usuarios, préstamos, espera, historial, turnos, categorías)
+├── docs/                  # Diagrama de clases UML (.png, .mmd, .md)
+├── include/
+│   ├── Dominio/           # Recurso.h (Libro, Computador, Sala), Usuario.h (Administrador)
+│   ├── Estructuras/       # 10 estructuras propias en C++17 (0% STL, Regla de los 3)
+│   ├── Seguridad/         # CryptoHash.h (OpenSSL PBKDF2), Validador.h
+│   └── Servicios/         # AdminCSV.h (escritura atómica), GestorCRAI.h (fachada 29 RQF)
+├── src/main.cpp           # Servidor REST local (cpp-httplib en 127.0.0.1:8080) + CLI --unlock
+├── tests/tests_main.cpp   # Suite automatizada de pruebas unitarias (AddressSanitizer)
+├── web/                   # Interfaz gráfica offline (index.html, app.js, styles.css)
+└── Makefile               # Compilación C++17 (-O2 y modo SANITIZE=1)
