@@ -141,3 +141,5 @@ fecha_hora,tipo_evento,codigo_recurso,documento_usuario,detalle
 2026-11-21 01:08:00,PRESTAMO,LIB026,1000100027,Prestamo aprobado (ID 85).
 2026-11-23 01:11:37,SISTEMA,,,Sistema CRAI inicializado correctamente.
 2026-11-23 01:12:18,LOGIN,,ADMIN01,Inicio de sesión administrativo exitoso.
+2026-11-23 07:05:41,SISTEMA,,,Sistema CRAI inicializado correctamente.
+2026-11-23 07:09:10,LOGIN,,ADMIN01,Inicio de sesión administrativo exitoso.
