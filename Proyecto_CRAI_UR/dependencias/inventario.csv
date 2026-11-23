@@ -1,0 +1,502 @@
+categoria,codigo,nombre,estado,disponible,sede_id,anio_adquisicion,veces_prestado,subcategoria,detalle_extra
+computador,COM001,Estacion Portatil COM001,prestado,0,0,2019,7,Equipos de Computo,Windows 11
+libro,LIB001,Libro Academico LIB001,prestado,0,0,2021,21,Ciencias Basicas,Editorial UR
+sala,SAL001,Sala de Estudio SAL001,prestado,0,0,2020,14,Espacios Colaborativos,6
+computador,COM002,Estacion Portatil COM002,disponible,1,1,2022,28,Equipos de Computo,Arch Linux
+libro,LIB002,Libro Academico LIB002,disponible,1,1,2024,42,Ingenieria,Editorial UR
+sala,SAL002,Sala de Estudio SAL002,disponible,1,1,2023,35,Espacios Colaborativos,9
+computador,COM003,Estacion Portatil COM003,prestado,0,2,2025,4,Equipos de Computo,Windows 11
+libro,LIB003,Libro Academico LIB003,prestado,0,2,2018,18,Ciencias Basicas,Editorial UR
+sala,SAL003,Sala de Estudio SAL003,prestado,0,2,2026,11,Espacios Colaborativos,5
+computador,COM004,Estacion Portatil COM004,prestado,0,3,2019,25,Equipos de Computo,Arch Linux
+libro,LIB004,Libro Academico LIB004,mantenimiento,0,3,2021,39,Ingenieria,Editorial UR
+sala,SAL004,Sala de Estudio SAL004,mantenimiento,0,3,2020,32,Espacios Colaborativos,8
+computador,COM005,Estacion Portatil COM005,prestado,0,4,2022,1,Equipos de Computo,Windows 11
+libro,LIB005,Libro Academico LIB005,mantenimiento,0,4,2024,15,Ciencias Basicas,Editorial UR
+sala,SAL005,Sala de Estudio SAL005,prestado,0,4,2023,8,Espacios Colaborativos,4
+computador,COM006,Estacion Portatil COM006,prestado,0,0,2025,22,Equipos de Computo,Arch Linux
+libro,LIB006,Libro Academico LIB006,mantenimiento,0,0,2018,36,Ingenieria,Editorial UR
+sala,SAL006,Sala de Estudio SAL006,prestado,0,0,2026,29,Espacios Colaborativos,7
+computador,COM007,Estacion Portatil COM007,mantenimiento,0,1,2019,43,Equipos de Computo,Windows 11
+libro,LIB007,Libro Academico LIB007,mantenimiento,0,1,2021,12,Ciencias Basicas,Editorial UR
+sala,SAL007,Sala de Estudio SAL007,mantenimiento,0,1,2020,5,Espacios Colaborativos,10
+computador,COM008,Estacion Portatil COM008,mantenimiento,0,2,2022,19,Equipos de Computo,Arch Linux
+libro,LIB008,Libro Academico LIB008,prestado,0,2,2024,33,Ingenieria,Editorial UR
+sala,SAL008,Sala de Estudio SAL008,mantenimiento,0,2,2023,26,Espacios Colaborativos,6
+computador,COM009,Estacion Portatil COM009,prestado,0,3,2025,40,Equipos de Computo,Windows 11
+libro,LIB009,Libro Academico LIB009,mantenimiento,0,3,2018,9,Ciencias Basicas,Editorial UR
+sala,SAL009,Sala de Estudio SAL009,mantenimiento,0,3,2026,2,Espacios Colaborativos,9
+computador,COM010,Estacion Portatil COM010,mantenimiento,0,4,2019,16,Equipos de Computo,Arch Linux
+libro,LIB010,Libro Academico LIB010,prestado,0,4,2021,30,Ingenieria,Editorial UR
+sala,SAL010,Sala de Estudio SAL010,mantenimiento,0,4,2020,23,Espacios Colaborativos,5
+computador,COM011,Estacion Portatil COM011,prestado,0,0,2022,37,Equipos de Computo,Windows 11
+libro,LIB011,Libro Academico LIB011,mantenimiento,0,0,2024,6,Ciencias Basicas,Editorial UR
+sala,SAL011,Sala de Estudio SAL011,mantenimiento,0,0,2023,44,Espacios Colaborativos,8
+computador,COM012,Estacion Portatil COM012,mantenimiento,0,1,2025,13,Equipos de Computo,Arch Linux
+libro,LIB012,Libro Academico LIB012,prestado,0,1,2018,27,Ingenieria,Editorial UR
+sala,SAL012,Sala de Estudio SAL012,mantenimiento,0,1,2026,20,Espacios Colaborativos,4
+computador,COM013,Estacion Portatil COM013,prestado,0,2,2019,34,Equipos de Computo,Windows 11
+libro,LIB013,Libro Academico LIB013,prestado,0,2,2021,3,Ciencias Basicas,Editorial UR
+sala,SAL013,Sala de Estudio SAL013,mantenimiento,0,2,2020,41,Espacios Colaborativos,7
+computador,COM014,Estacion Portatil COM014,prestado,0,3,2022,10,Equipos de Computo,Arch Linux
+libro,LIB014,Libro Academico LIB014,mantenimiento,0,3,2024,24,Ingenieria,Editorial UR
+sala,SAL014,Sala de Estudio SAL014,prestado,0,3,2023,17,Espacios Colaborativos,10
+computador,COM015,Estacion Portatil COM015,mantenimiento,0,4,2025,31,Equipos de Computo,Windows 11
+libro,LIB015,Libro Academico LIB015,prestado,0,4,2018,0,Ciencias Basicas,Editorial UR
+sala,SAL015,Sala de Estudio SAL015,prestado,0,4,2026,38,Espacios Colaborativos,6
+computador,COM016,Estacion Portatil COM016,prestado,0,0,2019,7,Equipos de Computo,Arch Linux
+libro,LIB016,Libro Academico LIB016,prestado,0,0,2021,21,Ingenieria,Editorial UR
+sala,SAL016,Sala de Estudio SAL016,mantenimiento,0,0,2020,14,Espacios Colaborativos,9
+computador,COM017,Estacion Portatil COM017,prestado,0,1,2022,28,Equipos de Computo,Windows 11
+libro,LIB017,Libro Academico LIB017,prestado,0,1,2024,42,Ciencias Basicas,Editorial UR
+sala,SAL017,Sala de Estudio SAL017,prestado,0,1,2023,35,Espacios Colaborativos,5
+computador,COM018,Estacion Portatil COM018,mantenimiento,0,2,2025,4,Equipos de Computo,Arch Linux
+libro,LIB018,Libro Academico LIB018,prestado,0,2,2018,18,Ingenieria,Editorial UR
+sala,SAL018,Sala de Estudio SAL018,prestado,0,2,2026,11,Espacios Colaborativos,8
+computador,COM019,Estacion Portatil COM019,prestado,0,3,2019,25,Equipos de Computo,Windows 11
+libro,LIB019,Libro Academico LIB019,prestado,0,3,2021,39,Ciencias Basicas,Editorial UR
+sala,SAL019,Sala de Estudio SAL019,mantenimiento,0,3,2020,32,Espacios Colaborativos,4
+computador,COM020,Estacion Portatil COM020,prestado,0,4,2022,1,Equipos de Computo,Arch Linux
+libro,LIB020,Libro Academico LIB020,mantenimiento,0,4,2024,15,Ingenieria,Editorial UR
+sala,SAL020,Sala de Estudio SAL020,prestado,0,4,2023,8,Espacios Colaborativos,7
+computador,COM021,Estacion Portatil COM021,prestado,0,0,2025,22,Equipos de Computo,Windows 11
+libro,LIB021,Libro Academico LIB021,mantenimiento,0,0,2018,36,Ciencias Basicas,Editorial UR
+sala,SAL021,Sala de Estudio SAL021,mantenimiento,0,0,2026,29,Espacios Colaborativos,10
+computador,COM022,Estacion Portatil COM022,prestado,0,1,2019,43,Equipos de Computo,Arch Linux
+libro,LIB022,Libro Academico LIB022,prestado,0,1,2021,12,Ingenieria,Editorial UR
+sala,SAL022,Sala de Estudio SAL022,mantenimiento,0,1,2020,5,Espacios Colaborativos,6
+computador,COM023,Estacion Portatil COM023,prestado,0,2,2022,19,Equipos de Computo,Windows 11
+libro,LIB023,Libro Academico LIB023,mantenimiento,0,2,2024,33,Ciencias Basicas,Editorial UR
+sala,SAL023,Sala de Estudio SAL023,prestado,0,2,2023,26,Espacios Colaborativos,9
+computador,COM024,Estacion Portatil COM024,mantenimiento,0,3,2025,40,Equipos de Computo,Arch Linux
+libro,LIB024,Libro Academico LIB024,prestado,0,3,2018,9,Ingenieria,Editorial UR
+sala,SAL024,Sala de Estudio SAL024,prestado,0,3,2026,2,Espacios Colaborativos,5
+computador,COM025,Estacion Portatil COM025,prestado,0,4,2019,16,Equipos de Computo,Windows 11
+libro,LIB025,Libro Academico LIB025,prestado,0,4,2021,30,Ciencias Basicas,Editorial UR
+sala,SAL025,Sala de Estudio SAL025,prestado,0,4,2020,23,Espacios Colaborativos,8
+computador,COM026,Estacion Portatil COM026,prestado,0,0,2022,37,Equipos de Computo,Arch Linux
+libro,LIB026,Libro Academico LIB026,prestado,0,0,2024,6,Ingenieria,Editorial UR
+sala,SAL026,Sala de Estudio SAL026,mantenimiento,0,0,2023,44,Espacios Colaborativos,4
+computador,COM027,Estacion Portatil COM027,disponible,1,1,2025,13,Equipos de Computo,Windows 11
+libro,LIB027,Libro Academico LIB027,disponible,1,1,2018,27,Ciencias Basicas,Editorial UR
+sala,SAL027,Sala de Estudio SAL027,mantenimiento,0,1,2026,20,Espacios Colaborativos,7
+computador,COM028,Estacion Portatil COM028,mantenimiento,0,2,2019,34,Equipos de Computo,Arch Linux
+libro,LIB028,Libro Academico LIB028,disponible,1,2,2021,3,Ingenieria,Editorial UR
+sala,SAL028,Sala de Estudio SAL028,disponible,1,2,2020,41,Espacios Colaborativos,10
+computador,COM029,Estacion Portatil COM029,disponible,1,3,2022,10,Equipos de Computo,Windows 11
+libro,LIB029,Libro Academico LIB029,mantenimiento,0,3,2024,24,Ciencias Basicas,Editorial UR
+sala,SAL029,Sala de Estudio SAL029,disponible,1,3,2023,17,Espacios Colaborativos,6
+computador,COM030,Estacion Portatil COM030,mantenimiento,0,4,2025,31,Equipos de Computo,Arch Linux
+libro,LIB030,Libro Academico LIB030,mantenimiento,0,4,2018,0,Ingenieria,Editorial UR
+sala,SAL030,Sala de Estudio SAL030,disponible,1,4,2026,38,Espacios Colaborativos,9
+computador,COM031,Estacion Portatil COM031,disponible,1,0,2019,7,Equipos de Computo,Windows 11
+libro,LIB031,Libro Academico LIB031,disponible,1,0,2021,21,Ciencias Basicas,Editorial UR
+sala,SAL031,Sala de Estudio SAL031,mantenimiento,0,0,2020,14,Espacios Colaborativos,5
+computador,COM032,Estacion Portatil COM032,mantenimiento,0,1,2022,28,Equipos de Computo,Arch Linux
+libro,LIB032,Libro Academico LIB032,mantenimiento,0,1,2024,42,Ingenieria,Editorial UR
+sala,SAL032,Sala de Estudio SAL032,disponible,1,1,2023,35,Espacios Colaborativos,8
+computador,COM033,Estacion Portatil COM033,mantenimiento,0,2,2025,4,Equipos de Computo,Windows 11
+libro,LIB033,Libro Academico LIB033,mantenimiento,0,2,2018,18,Ciencias Basicas,Editorial UR
+sala,SAL033,Sala de Estudio SAL033,mantenimiento,0,2,2026,11,Espacios Colaborativos,4
+computador,COM034,Estacion Portatil COM034,disponible,1,3,2019,25,Equipos de Computo,Arch Linux
+libro,LIB034,Libro Academico LIB034,disponible,1,3,2021,39,Ingenieria,Editorial UR
+sala,SAL034,Sala de Estudio SAL034,disponible,1,3,2020,32,Espacios Colaborativos,7
+computador,COM035,Estacion Portatil COM035,mantenimiento,0,4,2022,1,Equipos de Computo,Windows 11
+libro,LIB035,Libro Academico LIB035,disponible,1,4,2024,15,Ciencias Basicas,Editorial UR
+sala,SAL035,Sala de Estudio SAL035,disponible,1,4,2023,8,Espacios Colaborativos,10
+computador,COM036,Estacion Portatil COM036,mantenimiento,0,0,2025,22,Equipos de Computo,Arch Linux
+libro,LIB036,Libro Academico LIB036,mantenimiento,0,0,2018,36,Ingenieria,Editorial UR
+sala,SAL036,Sala de Estudio SAL036,disponible,1,0,2026,29,Espacios Colaborativos,6
+computador,COM037,Estacion Portatil COM037,disponible,1,1,2019,43,Equipos de Computo,Windows 11
+libro,LIB037,Libro Academico LIB037,disponible,1,1,2021,12,Ciencias Basicas,Editorial UR
+sala,SAL037,Sala de Estudio SAL037,disponible,1,1,2020,5,Espacios Colaborativos,9
+computador,COM038,Estacion Portatil COM038,mantenimiento,0,2,2022,19,Equipos de Computo,Arch Linux
+libro,LIB038,Libro Academico LIB038,disponible,1,2,2024,33,Ingenieria,Editorial UR
+sala,SAL038,Sala de Estudio SAL038,mantenimiento,0,2,2023,26,Espacios Colaborativos,5
+computador,COM039,Estacion Portatil COM039,disponible,1,3,2025,40,Equipos de Computo,Windows 11
+libro,LIB039,Libro Academico LIB039,disponible,1,3,2018,9,Ciencias Basicas,Editorial UR
+sala,SAL039,Sala de Estudio SAL039,mantenimiento,0,3,2026,2,Espacios Colaborativos,8
+computador,COM040,Estacion Portatil COM040,disponible,1,4,2019,16,Equipos de Computo,Arch Linux
+libro,LIB040,Libro Academico LIB040,disponible,1,4,2021,30,Ingenieria,Editorial UR
+sala,SAL040,Sala de Estudio SAL040,mantenimiento,0,4,2020,23,Espacios Colaborativos,4
+computador,COM041,Estacion Portatil COM041,mantenimiento,0,0,2022,37,Equipos de Computo,Windows 11
+libro,LIB041,Libro Academico LIB041,mantenimiento,0,0,2024,6,Ciencias Basicas,Editorial UR
+sala,SAL041,Sala de Estudio SAL041,disponible,1,0,2023,44,Espacios Colaborativos,7
+computador,COM042,Estacion Portatil COM042,mantenimiento,0,1,2025,13,Equipos de Computo,Arch Linux
+libro,LIB042,Libro Academico LIB042,mantenimiento,0,1,2018,27,Ingenieria,Editorial UR
+sala,SAL042,Sala de Estudio SAL042,disponible,1,1,2026,20,Espacios Colaborativos,10
+computador,COM043,Estacion Portatil COM043,disponible,1,2,2019,34,Equipos de Computo,Windows 11
+libro,LIB043,Libro Academico LIB043,mantenimiento,0,2,2021,3,Ciencias Basicas,Editorial UR
+sala,SAL043,Sala de Estudio SAL043,disponible,1,2,2020,41,Espacios Colaborativos,6
+computador,COM044,Estacion Portatil COM044,mantenimiento,0,3,2022,10,Equipos de Computo,Arch Linux
+libro,LIB044,Libro Academico LIB044,disponible,1,3,2024,24,Ingenieria,Editorial UR
+sala,SAL044,Sala de Estudio SAL044,disponible,1,3,2023,17,Espacios Colaborativos,9
+computador,COM045,Estacion Portatil COM045,mantenimiento,0,4,2025,31,Equipos de Computo,Windows 11
+libro,LIB045,Libro Academico LIB045,mantenimiento,0,4,2018,0,Ciencias Basicas,Editorial UR
+sala,SAL045,Sala de Estudio SAL045,disponible,1,4,2026,38,Espacios Colaborativos,5
+computador,COM046,Estacion Portatil COM046,mantenimiento,0,0,2019,7,Equipos de Computo,Arch Linux
+libro,LIB046,Libro Academico LIB046,disponible,1,0,2021,21,Ingenieria,Editorial UR
+sala,SAL046,Sala de Estudio SAL046,disponible,1,0,2020,14,Espacios Colaborativos,8
+computador,COM047,Estacion Portatil COM047,mantenimiento,0,1,2022,28,Equipos de Computo,Windows 11
+libro,LIB047,Libro Academico LIB047,mantenimiento,0,1,2024,42,Ciencias Basicas,Editorial UR
+sala,SAL047,Sala de Estudio SAL047,mantenimiento,0,1,2023,35,Espacios Colaborativos,4
+computador,COM048,Estacion Portatil COM048,mantenimiento,0,2,2025,4,Equipos de Computo,Arch Linux
+libro,LIB048,Libro Academico LIB048,disponible,1,2,2018,18,Ingenieria,Editorial UR
+sala,SAL048,Sala de Estudio SAL048,disponible,1,2,2026,11,Espacios Colaborativos,7
+computador,COM049,Estacion Portatil COM049,mantenimiento,0,3,2019,25,Equipos de Computo,Windows 11
+libro,LIB049,Libro Academico LIB049,mantenimiento,0,3,2021,39,Ciencias Basicas,Editorial UR
+sala,SAL049,Sala de Estudio SAL049,disponible,1,3,2020,32,Espacios Colaborativos,10
+computador,COM050,Estacion Portatil COM050,disponible,1,4,2022,1,Equipos de Computo,Arch Linux
+libro,LIB050,Libro Academico LIB050,disponible,1,4,2024,15,Ingenieria,Editorial UR
+sala,SAL050,Sala de Estudio SAL050,disponible,1,4,2023,8,Espacios Colaborativos,6
+computador,COM051,Estacion Portatil COM051,mantenimiento,0,0,2025,22,Equipos de Computo,Windows 11
+libro,LIB051,Libro Academico LIB051,mantenimiento,0,0,2018,36,Ciencias Basicas,Editorial UR
+sala,SAL051,Sala de Estudio SAL051,disponible,1,0,2026,29,Espacios Colaborativos,9
+computador,COM052,Estacion Portatil COM052,mantenimiento,0,1,2019,43,Equipos de Computo,Arch Linux
+libro,LIB052,Libro Academico LIB052,mantenimiento,0,1,2021,12,Ingenieria,Editorial UR
+sala,SAL052,Sala de Estudio SAL052,disponible,1,1,2020,5,Espacios Colaborativos,5
+computador,COM053,Estacion Portatil COM053,disponible,1,2,2022,19,Equipos de Computo,Windows 11
+libro,LIB053,Libro Academico LIB053,disponible,1,2,2024,33,Ciencias Basicas,Editorial UR
+sala,SAL053,Sala de Estudio SAL053,mantenimiento,0,2,2023,26,Espacios Colaborativos,8
+computador,COM054,Estacion Portatil COM054,disponible,1,3,2025,40,Equipos de Computo,Arch Linux
+libro,LIB054,Libro Academico LIB054,disponible,1,3,2018,9,Ingenieria,Editorial UR
+sala,SAL054,Sala de Estudio SAL054,disponible,1,3,2026,2,Espacios Colaborativos,4
+computador,COM055,Estacion Portatil COM055,disponible,1,4,2019,16,Equipos de Computo,Windows 11
+libro,LIB055,Libro Academico LIB055,disponible,1,4,2021,30,Ciencias Basicas,Editorial UR
+sala,SAL055,Sala de Estudio SAL055,disponible,1,4,2020,23,Espacios Colaborativos,7
+computador,COM056,Estacion Portatil COM056,disponible,1,0,2022,37,Equipos de Computo,Arch Linux
+libro,LIB056,Libro Academico LIB056,disponible,1,0,2024,6,Ingenieria,Editorial UR
+sala,SAL056,Sala de Estudio SAL056,disponible,1,0,2023,44,Espacios Colaborativos,10
+computador,COM057,Estacion Portatil COM057,disponible,1,1,2025,13,Equipos de Computo,Windows 11
+libro,LIB057,Libro Academico LIB057,mantenimiento,0,1,2018,27,Ciencias Basicas,Editorial UR
+sala,SAL057,Sala de Estudio SAL057,disponible,1,1,2026,20,Espacios Colaborativos,6
+computador,COM058,Estacion Portatil COM058,mantenimiento,0,2,2019,34,Equipos de Computo,Arch Linux
+libro,LIB058,Libro Academico LIB058,mantenimiento,0,2,2021,3,Ingenieria,Editorial UR
+sala,SAL058,Sala de Estudio SAL058,mantenimiento,0,2,2020,41,Espacios Colaborativos,9
+computador,COM059,Estacion Portatil COM059,disponible,1,3,2022,10,Equipos de Computo,Windows 11
+libro,LIB059,Libro Academico LIB059,disponible,1,3,2024,24,Ciencias Basicas,Editorial UR
+sala,SAL059,Sala de Estudio SAL059,disponible,1,3,2023,17,Espacios Colaborativos,5
+computador,COM060,Estacion Portatil COM060,mantenimiento,0,4,2025,31,Equipos de Computo,Arch Linux
+libro,LIB060,Libro Academico LIB060,disponible,1,4,2018,0,Ingenieria,Editorial UR
+sala,SAL060,Sala de Estudio SAL060,mantenimiento,0,4,2026,38,Espacios Colaborativos,8
+computador,COM061,Estacion Portatil COM061,mantenimiento,0,0,2019,7,Equipos de Computo,Windows 11
+libro,LIB061,Libro Academico LIB061,mantenimiento,0,0,2021,21,Ciencias Basicas,Editorial UR
+sala,SAL061,Sala de Estudio SAL061,disponible,1,0,2020,14,Espacios Colaborativos,4
+computador,COM062,Estacion Portatil COM062,disponible,1,1,2022,28,Equipos de Computo,Arch Linux
+libro,LIB062,Libro Academico LIB062,mantenimiento,0,1,2024,42,Ingenieria,Editorial UR
+sala,SAL062,Sala de Estudio SAL062,disponible,1,1,2023,35,Espacios Colaborativos,7
+computador,COM063,Estacion Portatil COM063,mantenimiento,0,2,2025,4,Equipos de Computo,Windows 11
+libro,LIB063,Libro Academico LIB063,disponible,1,2,2018,18,Ciencias Basicas,Editorial UR
+sala,SAL063,Sala de Estudio SAL063,disponible,1,2,2026,11,Espacios Colaborativos,10
+computador,COM064,Estacion Portatil COM064,disponible,1,3,2019,25,Equipos de Computo,Arch Linux
+libro,LIB064,Libro Academico LIB064,disponible,1,3,2021,39,Ingenieria,Editorial UR
+sala,SAL064,Sala de Estudio SAL064,disponible,1,3,2020,32,Espacios Colaborativos,6
+computador,COM065,Estacion Portatil COM065,disponible,1,4,2022,1,Equipos de Computo,Windows 11
+libro,LIB065,Libro Academico LIB065,disponible,1,4,2024,15,Ciencias Basicas,Editorial UR
+sala,SAL065,Sala de Estudio SAL065,mantenimiento,0,4,2023,8,Espacios Colaborativos,9
+computador,COM066,Estacion Portatil COM066,mantenimiento,0,0,2025,22,Equipos de Computo,Arch Linux
+libro,LIB066,Libro Academico LIB066,mantenimiento,0,0,2018,36,Ingenieria,Editorial UR
+sala,SAL066,Sala de Estudio SAL066,mantenimiento,0,0,2026,29,Espacios Colaborativos,5
+computador,COM067,Estacion Portatil COM067,disponible,1,1,2019,43,Equipos de Computo,Windows 11
+libro,LIB067,Libro Academico LIB067,disponible,1,1,2021,12,Ciencias Basicas,Editorial UR
+sala,SAL067,Sala de Estudio SAL067,mantenimiento,0,1,2020,5,Espacios Colaborativos,8
+computador,COM068,Estacion Portatil COM068,disponible,1,2,2022,19,Equipos de Computo,Arch Linux
+libro,LIB068,Libro Academico LIB068,disponible,1,2,2024,33,Ingenieria,Editorial UR
+sala,SAL068,Sala de Estudio SAL068,mantenimiento,0,2,2023,26,Espacios Colaborativos,4
+computador,COM069,Estacion Portatil COM069,mantenimiento,0,3,2025,40,Equipos de Computo,Windows 11
+libro,LIB069,Libro Academico LIB069,disponible,1,3,2018,9,Ciencias Basicas,Editorial UR
+sala,SAL069,Sala de Estudio SAL069,disponible,1,3,2026,2,Espacios Colaborativos,7
+computador,COM070,Estacion Portatil COM070,mantenimiento,0,4,2019,16,Equipos de Computo,Arch Linux
+libro,LIB070,Libro Academico LIB070,mantenimiento,0,4,2021,30,Ingenieria,Editorial UR
+sala,SAL070,Sala de Estudio SAL070,mantenimiento,0,4,2020,23,Espacios Colaborativos,10
+computador,COM071,Estacion Portatil COM071,mantenimiento,0,0,2022,37,Equipos de Computo,Windows 11
+libro,LIB071,Libro Academico LIB071,mantenimiento,0,0,2024,6,Ciencias Basicas,Editorial UR
+sala,SAL071,Sala de Estudio SAL071,disponible,1,0,2023,44,Espacios Colaborativos,6
+computador,COM072,Estacion Portatil COM072,disponible,1,1,2025,13,Equipos de Computo,Arch Linux
+libro,LIB072,Libro Academico LIB072,mantenimiento,0,1,2018,27,Ingenieria,Editorial UR
+sala,SAL072,Sala de Estudio SAL072,disponible,1,1,2026,20,Espacios Colaborativos,9
+computador,COM073,Estacion Portatil COM073,disponible,1,2,2019,34,Equipos de Computo,Windows 11
+libro,LIB073,Libro Academico LIB073,disponible,1,2,2021,3,Ciencias Basicas,Editorial UR
+sala,SAL073,Sala de Estudio SAL073,disponible,1,2,2020,41,Espacios Colaborativos,5
+computador,COM074,Estacion Portatil COM074,mantenimiento,0,3,2022,10,Equipos de Computo,Arch Linux
+libro,LIB074,Libro Academico LIB074,mantenimiento,0,3,2024,24,Ingenieria,Editorial UR
+sala,SAL074,Sala de Estudio SAL074,mantenimiento,0,3,2023,17,Espacios Colaborativos,8
+computador,COM075,Estacion Portatil COM075,mantenimiento,0,4,2025,31,Equipos de Computo,Windows 11
+libro,LIB075,Libro Academico LIB075,disponible,1,4,2018,0,Ciencias Basicas,Editorial UR
+sala,SAL075,Sala de Estudio SAL075,mantenimiento,0,4,2026,38,Espacios Colaborativos,4
+computador,COM076,Estacion Portatil COM076,mantenimiento,0,0,2019,7,Equipos de Computo,Arch Linux
+libro,LIB076,Libro Academico LIB076,disponible,1,0,2021,21,Ingenieria,Editorial UR
+sala,SAL076,Sala de Estudio SAL076,disponible,1,0,2020,14,Espacios Colaborativos,7
+computador,COM077,Estacion Portatil COM077,mantenimiento,0,1,2022,28,Equipos de Computo,Windows 11
+libro,LIB077,Libro Academico LIB077,mantenimiento,0,1,2024,42,Ciencias Basicas,Editorial UR
+sala,SAL077,Sala de Estudio SAL077,disponible,1,1,2023,35,Espacios Colaborativos,10
+computador,COM078,Estacion Portatil COM078,mantenimiento,0,2,2025,4,Equipos de Computo,Arch Linux
+libro,LIB078,Libro Academico LIB078,disponible,1,2,2018,18,Ingenieria,Editorial UR
+sala,SAL078,Sala de Estudio SAL078,disponible,1,2,2026,11,Espacios Colaborativos,6
+computador,COM079,Estacion Portatil COM079,disponible,1,3,2019,25,Equipos de Computo,Windows 11
+libro,LIB079,Libro Academico LIB079,mantenimiento,0,3,2021,39,Ciencias Basicas,Editorial UR
+sala,SAL079,Sala de Estudio SAL079,mantenimiento,0,3,2020,32,Espacios Colaborativos,9
+computador,COM080,Estacion Portatil COM080,disponible,1,4,2022,1,Equipos de Computo,Arch Linux
+libro,LIB080,Libro Academico LIB080,mantenimiento,0,4,2024,15,Ingenieria,Editorial UR
+sala,SAL080,Sala de Estudio SAL080,disponible,1,4,2023,8,Espacios Colaborativos,5
+computador,COM081,Estacion Portatil COM081,mantenimiento,0,0,2025,22,Equipos de Computo,Windows 11
+libro,LIB081,Libro Academico LIB081,disponible,1,0,2018,36,Ciencias Basicas,Editorial UR
+sala,SAL081,Sala de Estudio SAL081,mantenimiento,0,0,2026,29,Espacios Colaborativos,8
+computador,COM082,Estacion Portatil COM082,mantenimiento,0,1,2019,43,Equipos de Computo,Arch Linux
+libro,LIB082,Libro Academico LIB082,mantenimiento,0,1,2021,12,Ingenieria,Editorial UR
+sala,SAL082,Sala de Estudio SAL082,disponible,1,1,2020,5,Espacios Colaborativos,4
+computador,COM083,Estacion Portatil COM083,disponible,1,2,2022,19,Equipos de Computo,Windows 11
+libro,LIB083,Libro Academico LIB083,disponible,1,2,2024,33,Ciencias Basicas,Editorial UR
+sala,SAL083,Sala de Estudio SAL083,disponible,1,2,2023,26,Espacios Colaborativos,7
+computador,COM084,Estacion Portatil COM084,disponible,1,3,2025,40,Equipos de Computo,Arch Linux
+libro,LIB084,Libro Academico LIB084,disponible,1,3,2018,9,Ingenieria,Editorial UR
+sala,SAL084,Sala de Estudio SAL084,disponible,1,3,2026,2,Espacios Colaborativos,10
+computador,COM085,Estacion Portatil COM085,mantenimiento,0,4,2019,16,Equipos de Computo,Windows 11
+libro,LIB085,Libro Academico LIB085,disponible,1,4,2021,30,Ciencias Basicas,Editorial UR
+sala,SAL085,Sala de Estudio SAL085,mantenimiento,0,4,2020,23,Espacios Colaborativos,6
+computador,COM086,Estacion Portatil COM086,disponible,1,0,2022,37,Equipos de Computo,Arch Linux
+libro,LIB086,Libro Academico LIB086,disponible,1,0,2024,6,Ingenieria,Editorial UR
+sala,SAL086,Sala de Estudio SAL086,mantenimiento,0,0,2023,44,Espacios Colaborativos,9
+computador,COM087,Estacion Portatil COM087,mantenimiento,0,1,2025,13,Equipos de Computo,Windows 11
+libro,LIB087,Libro Academico LIB087,mantenimiento,0,1,2018,27,Ciencias Basicas,Editorial UR
+sala,SAL087,Sala de Estudio SAL087,disponible,1,1,2026,20,Espacios Colaborativos,5
+computador,COM088,Estacion Portatil COM088,disponible,1,2,2019,34,Equipos de Computo,Arch Linux
+libro,LIB088,Libro Academico LIB088,mantenimiento,0,2,2021,3,Ingenieria,Editorial UR
+sala,SAL088,Sala de Estudio SAL088,mantenimiento,0,2,2020,41,Espacios Colaborativos,8
+computador,COM089,Estacion Portatil COM089,mantenimiento,0,3,2022,10,Equipos de Computo,Windows 11
+libro,LIB089,Libro Academico LIB089,disponible,1,3,2024,24,Ciencias Basicas,Editorial UR
+sala,SAL089,Sala de Estudio SAL089,disponible,1,3,2023,17,Espacios Colaborativos,4
+computador,COM090,Estacion Portatil COM090,disponible,1,4,2025,31,Equipos de Computo,Arch Linux
+libro,LIB090,Libro Academico LIB090,mantenimiento,0,4,2018,0,Ingenieria,Editorial UR
+sala,SAL090,Sala de Estudio SAL090,disponible,1,4,2026,38,Espacios Colaborativos,7
+computador,COM091,Estacion Portatil COM091,disponible,1,0,2019,7,Equipos de Computo,Windows 11
+libro,LIB091,Libro Academico LIB091,mantenimiento,0,0,2021,21,Ciencias Basicas,Editorial UR
+sala,SAL091,Sala de Estudio SAL091,disponible,1,0,2020,14,Espacios Colaborativos,10
+computador,COM092,Estacion Portatil COM092,mantenimiento,0,1,2022,28,Equipos de Computo,Arch Linux
+libro,LIB092,Libro Academico LIB092,disponible,1,1,2024,42,Ingenieria,Editorial UR
+sala,SAL092,Sala de Estudio SAL092,disponible,1,1,2023,35,Espacios Colaborativos,6
+computador,COM093,Estacion Portatil COM093,disponible,1,2,2025,4,Equipos de Computo,Windows 11
+libro,LIB093,Libro Academico LIB093,disponible,1,2,2018,18,Ciencias Basicas,Editorial UR
+sala,SAL093,Sala de Estudio SAL093,disponible,1,2,2026,11,Espacios Colaborativos,9
+computador,COM094,Estacion Portatil COM094,disponible,1,3,2019,25,Equipos de Computo,Arch Linux
+libro,LIB094,Libro Academico LIB094,disponible,1,3,2021,39,Ingenieria,Editorial UR
+sala,SAL094,Sala de Estudio SAL094,disponible,1,3,2020,32,Espacios Colaborativos,5
+computador,COM095,Estacion Portatil COM095,mantenimiento,0,4,2022,1,Equipos de Computo,Windows 11
+libro,LIB095,Libro Academico LIB095,disponible,1,4,2024,15,Ciencias Basicas,Editorial UR
+sala,SAL095,Sala de Estudio SAL095,mantenimiento,0,4,2023,8,Espacios Colaborativos,8
+computador,COM096,Estacion Portatil COM096,mantenimiento,0,0,2025,22,Equipos de Computo,Arch Linux
+libro,LIB096,Libro Academico LIB096,disponible,1,0,2018,36,Ingenieria,Editorial UR
+sala,SAL096,Sala de Estudio SAL096,disponible,1,0,2026,29,Espacios Colaborativos,4
+computador,COM097,Estacion Portatil COM097,disponible,1,1,2019,43,Equipos de Computo,Windows 11
+libro,LIB097,Libro Academico LIB097,disponible,1,1,2021,12,Ciencias Basicas,Editorial UR
+sala,SAL097,Sala de Estudio SAL097,disponible,1,1,2020,5,Espacios Colaborativos,7
+computador,COM098,Estacion Portatil COM098,disponible,1,2,2022,19,Equipos de Computo,Arch Linux
+libro,LIB098,Libro Academico LIB098,disponible,1,2,2024,33,Ingenieria,Editorial UR
+sala,SAL098,Sala de Estudio SAL098,mantenimiento,0,2,2023,26,Espacios Colaborativos,10
+computador,COM099,Estacion Portatil COM099,mantenimiento,0,3,2025,40,Equipos de Computo,Windows 11
+libro,LIB099,Libro Academico LIB099,disponible,1,3,2018,9,Ciencias Basicas,Editorial UR
+sala,SAL099,Sala de Estudio SAL099,disponible,1,3,2026,2,Espacios Colaborativos,6
+computador,COM100,Estacion Portatil COM100,mantenimiento,0,4,2019,16,Equipos de Computo,Arch Linux
+libro,LIB100,Libro Academico LIB100,disponible,1,4,2021,30,Ingenieria,Editorial UR
+sala,SAL100,Sala de Estudio SAL100,disponible,1,4,2020,23,Espacios Colaborativos,9
+computador,COM101,Estacion Portatil COM101,disponible,1,0,2022,37,Equipos de Computo,Windows 11
+libro,LIB101,Libro Academico LIB101,mantenimiento,0,0,2024,6,Ciencias Basicas,Editorial UR
+sala,SAL101,Sala de Estudio SAL101,mantenimiento,0,0,2023,44,Espacios Colaborativos,5
+computador,COM102,Estacion Portatil COM102,mantenimiento,0,1,2025,13,Equipos de Computo,Arch Linux
+libro,LIB102,Libro Academico LIB102,disponible,1,1,2018,27,Ingenieria,Editorial UR
+sala,SAL102,Sala de Estudio SAL102,mantenimiento,0,1,2026,20,Espacios Colaborativos,8
+computador,COM103,Estacion Portatil COM103,disponible,1,2,2019,34,Equipos de Computo,Windows 11
+libro,LIB103,Libro Academico LIB103,disponible,1,2,2021,3,Ciencias Basicas,Editorial UR
+sala,SAL103,Sala de Estudio SAL103,mantenimiento,0,2,2020,41,Espacios Colaborativos,4
+computador,COM104,Estacion Portatil COM104,mantenimiento,0,3,2022,10,Equipos de Computo,Arch Linux
+libro,LIB104,Libro Academico LIB104,disponible,1,3,2024,24,Ingenieria,Editorial UR
+sala,SAL104,Sala de Estudio SAL104,disponible,1,3,2023,17,Espacios Colaborativos,7
+computador,COM105,Estacion Portatil COM105,mantenimiento,0,4,2025,31,Equipos de Computo,Windows 11
+libro,LIB105,Libro Academico LIB105,disponible,1,4,2018,0,Ciencias Basicas,Editorial UR
+sala,SAL105,Sala de Estudio SAL105,disponible,1,4,2026,38,Espacios Colaborativos,10
+computador,COM106,Estacion Portatil COM106,disponible,1,0,2019,7,Equipos de Computo,Arch Linux
+libro,LIB106,Libro Academico LIB106,disponible,1,0,2021,21,Ingenieria,Editorial UR
+sala,SAL106,Sala de Estudio SAL106,mantenimiento,0,0,2020,14,Espacios Colaborativos,6
+computador,COM107,Estacion Portatil COM107,mantenimiento,0,1,2022,28,Equipos de Computo,Windows 11
+libro,LIB107,Libro Academico LIB107,disponible,1,1,2024,42,Ciencias Basicas,Editorial UR
+sala,SAL107,Sala de Estudio SAL107,mantenimiento,0,1,2023,35,Espacios Colaborativos,9
+computador,COM108,Estacion Portatil COM108,disponible,1,2,2025,4,Equipos de Computo,Arch Linux
+libro,LIB108,Libro Academico LIB108,mantenimiento,0,2,2018,18,Ingenieria,Editorial UR
+sala,SAL108,Sala de Estudio SAL108,disponible,1,2,2026,11,Espacios Colaborativos,5
+computador,COM109,Estacion Portatil COM109,disponible,1,3,2019,25,Equipos de Computo,Windows 11
+libro,LIB109,Libro Academico LIB109,disponible,1,3,2021,39,Ciencias Basicas,Editorial UR
+sala,SAL109,Sala de Estudio SAL109,disponible,1,3,2020,32,Espacios Colaborativos,8
+computador,COM110,Estacion Portatil COM110,disponible,1,4,2022,1,Equipos de Computo,Arch Linux
+libro,LIB110,Libro Academico LIB110,disponible,1,4,2024,15,Ingenieria,Editorial UR
+sala,SAL110,Sala de Estudio SAL110,disponible,1,4,2023,8,Espacios Colaborativos,4
+computador,COM111,Estacion Portatil COM111,disponible,1,0,2025,22,Equipos de Computo,Windows 11
+libro,LIB111,Libro Academico LIB111,disponible,1,0,2018,36,Ciencias Basicas,Editorial UR
+sala,SAL111,Sala de Estudio SAL111,mantenimiento,0,0,2026,29,Espacios Colaborativos,7
+computador,COM112,Estacion Portatil COM112,mantenimiento,0,1,2019,43,Equipos de Computo,Arch Linux
+libro,LIB112,Libro Academico LIB112,disponible,1,1,2021,12,Ingenieria,Editorial UR
+sala,SAL112,Sala de Estudio SAL112,disponible,1,1,2020,5,Espacios Colaborativos,10
+computador,COM113,Estacion Portatil COM113,disponible,1,2,2022,19,Equipos de Computo,Windows 11
+libro,LIB113,Libro Academico LIB113,mantenimiento,0,2,2024,33,Ciencias Basicas,Editorial UR
+sala,SAL113,Sala de Estudio SAL113,mantenimiento,0,2,2023,26,Espacios Colaborativos,6
+computador,COM114,Estacion Portatil COM114,mantenimiento,0,3,2025,40,Equipos de Computo,Arch Linux
+libro,LIB114,Libro Academico LIB114,mantenimiento,0,3,2018,9,Ingenieria,Editorial UR
+sala,SAL114,Sala de Estudio SAL114,disponible,1,3,2026,2,Espacios Colaborativos,9
+computador,COM115,Estacion Portatil COM115,disponible,1,4,2019,16,Equipos de Computo,Windows 11
+libro,LIB115,Libro Academico LIB115,disponible,1,4,2021,30,Ciencias Basicas,Editorial UR
+sala,SAL115,Sala de Estudio SAL115,disponible,1,4,2020,23,Espacios Colaborativos,5
+computador,COM116,Estacion Portatil COM116,mantenimiento,0,0,2022,37,Equipos de Computo,Arch Linux
+libro,LIB116,Libro Academico LIB116,disponible,1,0,2024,6,Ingenieria,Editorial UR
+sala,SAL116,Sala de Estudio SAL116,mantenimiento,0,0,2023,44,Espacios Colaborativos,8
+computador,COM117,Estacion Portatil COM117,mantenimiento,0,1,2025,13,Equipos de Computo,Windows 11
+libro,LIB117,Libro Academico LIB117,mantenimiento,0,1,2018,27,Ciencias Basicas,Editorial UR
+sala,SAL117,Sala de Estudio SAL117,disponible,1,1,2026,20,Espacios Colaborativos,4
+computador,COM118,Estacion Portatil COM118,disponible,1,2,2019,34,Equipos de Computo,Arch Linux
+libro,LIB118,Libro Academico LIB118,mantenimiento,0,2,2021,3,Ingenieria,Editorial UR
+sala,SAL118,Sala de Estudio SAL118,mantenimiento,0,2,2020,41,Espacios Colaborativos,7
+computador,COM119,Estacion Portatil COM119,mantenimiento,0,3,2022,10,Equipos de Computo,Windows 11
+libro,LIB119,Libro Academico LIB119,disponible,1,3,2024,24,Ciencias Basicas,Editorial UR
+sala,SAL119,Sala de Estudio SAL119,mantenimiento,0,3,2023,17,Espacios Colaborativos,10
+computador,COM120,Estacion Portatil COM120,disponible,1,4,2025,31,Equipos de Computo,Arch Linux
+libro,LIB120,Libro Academico LIB120,disponible,1,4,2018,0,Ingenieria,Editorial UR
+sala,SAL120,Sala de Estudio SAL120,disponible,1,4,2026,38,Espacios Colaborativos,6
+computador,COM121,Estacion Portatil COM121,mantenimiento,0,0,2019,7,Equipos de Computo,Windows 11
+libro,LIB121,Libro Academico LIB121,mantenimiento,0,0,2021,21,Ciencias Basicas,Editorial UR
+sala,SAL121,Sala de Estudio SAL121,mantenimiento,0,0,2020,14,Espacios Colaborativos,9
+computador,COM122,Estacion Portatil COM122,mantenimiento,0,1,2022,28,Equipos de Computo,Arch Linux
+libro,LIB122,Libro Academico LIB122,mantenimiento,0,1,2024,42,Ingenieria,Editorial UR
+sala,SAL122,Sala de Estudio SAL122,disponible,1,1,2023,35,Espacios Colaborativos,5
+computador,COM123,Estacion Portatil COM123,mantenimiento,0,2,2025,4,Equipos de Computo,Windows 11
+libro,LIB123,Libro Academico LIB123,mantenimiento,0,2,2018,18,Ciencias Basicas,Editorial UR
+sala,SAL123,Sala de Estudio SAL123,disponible,1,2,2026,11,Espacios Colaborativos,8
+computador,COM124,Estacion Portatil COM124,disponible,1,3,2019,25,Equipos de Computo,Arch Linux
+libro,LIB124,Libro Academico LIB124,mantenimiento,0,3,2021,39,Ingenieria,Editorial UR
+sala,SAL124,Sala de Estudio SAL124,disponible,1,3,2020,32,Espacios Colaborativos,4
+computador,COM125,Estacion Portatil COM125,disponible,1,4,2022,1,Equipos de Computo,Windows 11
+libro,LIB125,Libro Academico LIB125,disponible,1,4,2024,15,Ciencias Basicas,Editorial UR
+sala,SAL125,Sala de Estudio SAL125,disponible,1,4,2023,8,Espacios Colaborativos,7
+computador,COM126,Estacion Portatil COM126,disponible,1,0,2025,22,Equipos de Computo,Arch Linux
+libro,LIB126,Libro Academico LIB126,disponible,1,0,2018,36,Ingenieria,Editorial UR
+sala,SAL126,Sala de Estudio SAL126,disponible,1,0,2026,29,Espacios Colaborativos,10
+computador,COM127,Estacion Portatil COM127,disponible,1,1,2019,43,Equipos de Computo,Windows 11
+libro,LIB127,Libro Academico LIB127,disponible,1,1,2021,12,Ciencias Basicas,Editorial UR
+sala,SAL127,Sala de Estudio SAL127,disponible,1,1,2020,5,Espacios Colaborativos,6
+computador,COM128,Estacion Portatil COM128,mantenimiento,0,2,2022,19,Equipos de Computo,Arch Linux
+libro,LIB128,Libro Academico LIB128,disponible,1,2,2024,33,Ingenieria,Editorial UR
+sala,SAL128,Sala de Estudio SAL128,mantenimiento,0,2,2023,26,Espacios Colaborativos,9
+computador,COM129,Estacion Portatil COM129,mantenimiento,0,3,2025,40,Equipos de Computo,Windows 11
+libro,LIB129,Libro Academico LIB129,disponible,1,3,2018,9,Ciencias Basicas,Editorial UR
+sala,SAL129,Sala de Estudio SAL129,mantenimiento,0,3,2026,2,Espacios Colaborativos,5
+computador,COM130,Estacion Portatil COM130,mantenimiento,0,4,2019,16,Equipos de Computo,Arch Linux
+libro,LIB130,Libro Academico LIB130,mantenimiento,0,4,2021,30,Ingenieria,Editorial UR
+sala,SAL130,Sala de Estudio SAL130,mantenimiento,0,4,2020,23,Espacios Colaborativos,8
+computador,COM131,Estacion Portatil COM131,mantenimiento,0,0,2022,37,Equipos de Computo,Windows 11
+libro,LIB131,Libro Academico LIB131,disponible,1,0,2024,6,Ciencias Basicas,Editorial UR
+sala,SAL131,Sala de Estudio SAL131,disponible,1,0,2023,44,Espacios Colaborativos,4
+computador,COM132,Estacion Portatil COM132,mantenimiento,0,1,2025,13,Equipos de Computo,Arch Linux
+libro,LIB132,Libro Academico LIB132,disponible,1,1,2018,27,Ingenieria,Editorial UR
+sala,SAL132,Sala de Estudio SAL132,disponible,1,1,2026,20,Espacios Colaborativos,7
+computador,COM133,Estacion Portatil COM133,disponible,1,2,2019,34,Equipos de Computo,Windows 11
+libro,LIB133,Libro Academico LIB133,disponible,1,2,2021,3,Ciencias Basicas,Editorial UR
+sala,SAL133,Sala de Estudio SAL133,disponible,1,2,2020,41,Espacios Colaborativos,10
+computador,COM134,Estacion Portatil COM134,disponible,1,3,2022,10,Equipos de Computo,Arch Linux
+libro,LIB134,Libro Academico LIB134,mantenimiento,0,3,2024,24,Ingenieria,Editorial UR
+sala,SAL134,Sala de Estudio SAL134,mantenimiento,0,3,2023,17,Espacios Colaborativos,6
+computador,COM135,Estacion Portatil COM135,mantenimiento,0,4,2025,31,Equipos de Computo,Windows 11
+libro,LIB135,Libro Academico LIB135,disponible,1,4,2018,0,Ciencias Basicas,Editorial UR
+sala,SAL135,Sala de Estudio SAL135,disponible,1,4,2026,38,Espacios Colaborativos,9
+computador,COM136,Estacion Portatil COM136,mantenimiento,0,0,2019,7,Equipos de Computo,Arch Linux
+libro,LIB136,Libro Academico LIB136,mantenimiento,0,0,2021,21,Ingenieria,Editorial UR
+sala,SAL136,Sala de Estudio SAL136,disponible,1,0,2020,14,Espacios Colaborativos,5
+computador,COM137,Estacion Portatil COM137,disponible,1,1,2022,28,Equipos de Computo,Windows 11
+libro,LIB137,Libro Academico LIB137,mantenimiento,0,1,2024,42,Ciencias Basicas,Editorial UR
+sala,SAL137,Sala de Estudio SAL137,mantenimiento,0,1,2023,35,Espacios Colaborativos,8
+computador,COM138,Estacion Portatil COM138,mantenimiento,0,2,2025,4,Equipos de Computo,Arch Linux
+libro,LIB138,Libro Academico LIB138,disponible,1,2,2018,18,Ingenieria,Editorial UR
+sala,SAL138,Sala de Estudio SAL138,disponible,1,2,2026,11,Espacios Colaborativos,4
+computador,COM139,Estacion Portatil COM139,disponible,1,3,2019,25,Equipos de Computo,Windows 11
+libro,LIB139,Libro Academico LIB139,disponible,1,3,2021,39,Ciencias Basicas,Editorial UR
+sala,SAL139,Sala de Estudio SAL139,disponible,1,3,2020,32,Espacios Colaborativos,7
+computador,COM140,Estacion Portatil COM140,disponible,1,4,2022,1,Equipos de Computo,Arch Linux
+libro,LIB140,Libro Academico LIB140,disponible,1,4,2024,15,Ingenieria,Editorial UR
+sala,SAL140,Sala de Estudio SAL140,disponible,1,4,2023,8,Espacios Colaborativos,10
+computador,COM141,Estacion Portatil COM141,disponible,1,0,2025,22,Equipos de Computo,Windows 11
+libro,LIB141,Libro Academico LIB141,mantenimiento,0,0,2018,36,Ciencias Basicas,Editorial UR
+sala,SAL141,Sala de Estudio SAL141,disponible,1,0,2026,29,Espacios Colaborativos,6
+computador,COM142,Estacion Portatil COM142,disponible,1,1,2019,43,Equipos de Computo,Arch Linux
+libro,LIB142,Libro Academico LIB142,disponible,1,1,2021,12,Ingenieria,Editorial UR
+sala,SAL142,Sala de Estudio SAL142,disponible,1,1,2020,5,Espacios Colaborativos,9
+computador,COM143,Estacion Portatil COM143,mantenimiento,0,2,2022,19,Equipos de Computo,Windows 11
+libro,LIB143,Libro Academico LIB143,disponible,1,2,2024,33,Ciencias Basicas,Editorial UR
+sala,SAL143,Sala de Estudio SAL143,disponible,1,2,2023,26,Espacios Colaborativos,5
+computador,COM144,Estacion Portatil COM144,disponible,1,3,2025,40,Equipos de Computo,Arch Linux
+libro,LIB144,Libro Academico LIB144,disponible,1,3,2018,9,Ingenieria,Editorial UR
+sala,SAL144,Sala de Estudio SAL144,disponible,1,3,2026,2,Espacios Colaborativos,8
+computador,COM145,Estacion Portatil COM145,disponible,1,4,2019,16,Equipos de Computo,Windows 11
+libro,LIB145,Libro Academico LIB145,disponible,1,4,2021,30,Ciencias Basicas,Editorial UR
+sala,SAL145,Sala de Estudio SAL145,disponible,1,4,2020,23,Espacios Colaborativos,4
+computador,COM146,Estacion Portatil COM146,mantenimiento,0,0,2022,37,Equipos de Computo,Arch Linux
+libro,LIB146,Libro Academico LIB146,disponible,1,0,2024,6,Ingenieria,Editorial UR
+sala,SAL146,Sala de Estudio SAL146,mantenimiento,0,0,2023,44,Espacios Colaborativos,7
+computador,COM147,Estacion Portatil COM147,mantenimiento,0,1,2025,13,Equipos de Computo,Windows 11
+libro,LIB147,Libro Academico LIB147,mantenimiento,0,1,2018,27,Ciencias Basicas,Editorial UR
+sala,SAL147,Sala de Estudio SAL147,mantenimiento,0,1,2026,20,Espacios Colaborativos,10
+computador,COM148,Estacion Portatil COM148,mantenimiento,0,2,2019,34,Equipos de Computo,Arch Linux
+libro,LIB148,Libro Academico LIB148,disponible,1,2,2021,3,Ingenieria,Editorial UR
+sala,SAL148,Sala de Estudio SAL148,mantenimiento,0,2,2020,41,Espacios Colaborativos,6
+computador,COM149,Estacion Portatil COM149,disponible,1,3,2022,10,Equipos de Computo,Windows 11
+libro,LIB149,Libro Academico LIB149,disponible,1,3,2024,24,Ciencias Basicas,Editorial UR
+sala,SAL149,Sala de Estudio SAL149,mantenimiento,0,3,2023,17,Espacios Colaborativos,9
+computador,COM150,Estacion Portatil COM150,disponible,1,4,2025,31,Equipos de Computo,Arch Linux
+libro,LIB150,Libro Academico LIB150,mantenimiento,0,4,2018,0,Ingenieria,Editorial UR
+sala,SAL150,Sala de Estudio SAL150,mantenimiento,0,4,2026,38,Espacios Colaborativos,5
+computador,COM151,Estacion Portatil COM151,mantenimiento,0,0,2019,7,Equipos de Computo,Windows 11
+libro,LIB151,Libro Academico LIB151,disponible,1,0,2021,21,Ciencias Basicas,Editorial UR
+sala,SAL151,Sala de Estudio SAL151,disponible,1,0,2020,14,Espacios Colaborativos,8
+computador,COM152,Estacion Portatil COM152,mantenimiento,0,1,2022,28,Equipos de Computo,Arch Linux
+libro,LIB152,Libro Academico LIB152,disponible,1,1,2024,42,Ingenieria,Editorial UR
+sala,SAL152,Sala de Estudio SAL152,mantenimiento,0,1,2023,35,Espacios Colaborativos,4
+computador,COM153,Estacion Portatil COM153,disponible,1,2,2025,4,Equipos de Computo,Windows 11
+libro,LIB153,Libro Academico LIB153,disponible,1,2,2018,18,Ciencias Basicas,Editorial UR
+sala,SAL153,Sala de Estudio SAL153,disponible,1,2,2026,11,Espacios Colaborativos,7
+computador,COM154,Estacion Portatil COM154,mantenimiento,0,3,2019,25,Equipos de Computo,Arch Linux
+libro,LIB154,Libro Academico LIB154,disponible,1,3,2021,39,Ingenieria,Editorial UR
+sala,SAL154,Sala de Estudio SAL154,mantenimiento,0,3,2020,32,Espacios Colaborativos,10
+computador,COM155,Estacion Portatil COM155,disponible,1,4,2022,1,Equipos de Computo,Windows 11
+libro,LIB155,Libro Academico LIB155,mantenimiento,0,4,2024,15,Ciencias Basicas,Editorial UR
+sala,SAL155,Sala de Estudio SAL155,disponible,1,4,2023,8,Espacios Colaborativos,6
+computador,COM156,Estacion Portatil COM156,disponible,1,0,2025,22,Equipos de Computo,Arch Linux
+libro,LIB156,Libro Academico LIB156,disponible,1,0,2018,36,Ingenieria,Editorial UR
+sala,SAL156,Sala de Estudio SAL156,disponible,1,0,2026,29,Espacios Colaborativos,9
+computador,COM157,Estacion Portatil COM157,disponible,1,1,2019,43,Equipos de Computo,Windows 11
+libro,LIB157,Libro Academico LIB157,mantenimiento,0,1,2021,12,Ciencias Basicas,Editorial UR
+sala,SAL157,Sala de Estudio SAL157,disponible,1,1,2020,5,Espacios Colaborativos,5
+computador,COM158,Estacion Portatil COM158,mantenimiento,0,2,2022,19,Equipos de Computo,Arch Linux
+libro,LIB158,Libro Academico LIB158,mantenimiento,0,2,2024,33,Ingenieria,Editorial UR
+sala,SAL158,Sala de Estudio SAL158,disponible,1,2,2023,26,Espacios Colaborativos,8
+computador,COM159,Estacion Portatil COM159,mantenimiento,0,3,2025,40,Equipos de Computo,Windows 11
+libro,LIB159,Libro Academico LIB159,mantenimiento,0,3,2018,9,Ciencias Basicas,Editorial UR
+sala,SAL159,Sala de Estudio SAL159,disponible,1,3,2026,2,Espacios Colaborativos,4
+computador,COM160,Estacion Portatil COM160,disponible,1,4,2019,16,Equipos de Computo,Arch Linux
+libro,LIB160,Libro Academico LIB160,disponible,1,4,2021,30,Ingenieria,Editorial UR
+sala,SAL160,Sala de Estudio SAL160,disponible,1,4,2020,23,Espacios Colaborativos,7
+computador,COM161,Estacion Portatil COM161,disponible,1,0,2022,37,Equipos de Computo,Windows 11
+libro,LIB161,Libro Academico LIB161,disponible,1,0,2024,6,Ciencias Basicas,Editorial UR
+sala,SAL161,Sala de Estudio SAL161,disponible,1,0,2023,44,Espacios Colaborativos,10
+computador,COM162,Estacion Portatil COM162,disponible,1,1,2025,13,Equipos de Computo,Arch Linux
+libro,LIB162,Libro Academico LIB162,mantenimiento,0,1,2018,27,Ingenieria,Editorial UR
+sala,SAL162,Sala de Estudio SAL162,mantenimiento,0,1,2026,20,Espacios Colaborativos,6
+computador,COM163,Estacion Portatil COM163,disponible,1,2,2019,34,Equipos de Computo,Windows 11
+libro,LIB163,Libro Academico LIB163,mantenimiento,0,2,2021,3,Ciencias Basicas,Editorial UR
+sala,SAL163,Sala de Estudio SAL163,disponible,1,2,2020,41,Espacios Colaborativos,9
+computador,COM164,Estacion Portatil COM164,disponible,1,3,2022,10,Equipos de Computo,Arch Linux
+libro,LIB164,Libro Academico LIB164,disponible,1,3,2024,24,Ingenieria,Editorial UR
+sala,SAL164,Sala de Estudio SAL164,disponible,1,3,2023,17,Espacios Colaborativos,5
+computador,COM165,Estacion Portatil COM165,disponible,1,4,2025,31,Equipos de Computo,Windows 11
+libro,LIB165,Libro Academico LIB165,disponible,1,4,2018,0,Ciencias Basicas,Editorial UR
+sala,SAL165,Sala de Estudio SAL165,disponible,1,4,2026,38,Espacios Colaborativos,8
+computador,COM166,Estacion Portatil COM166,disponible,1,0,2019,7,Equipos de Computo,Arch Linux
+libro,LIB166,Libro Academico LIB166,disponible,1,0,2021,21,Ingenieria,Editorial UR
+sala,SAL166,Sala de Estudio SAL166,mantenimiento,0,0,2020,14,Espacios Colaborativos,4
+computador,COM167,Estacion Portatil COM167,disponible,1,1,2022,28,Equipos de Computo,Windows 11
+libro,LIB167,Libro Academico LIB167,disponible,1,1,2026,12,Algoritmos,Editorial UR
+sala,SAL167,Sala de Estudio SAL167,disponible,1,1,2023,35,Espacios Colaborativos,7
