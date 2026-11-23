@@ -5,13 +5,16 @@ name: CI - Build & Memory Sanitizer (CRAI C++)
 
 on:
   push:
-    branches: [ "main", "master", "develop" ]
+    branches: [ "main" ]
   pull_request:
-    branches: [ "main", "master" ]
+    branches: [ "main" ]
 
 jobs:
   build-and-test:
     runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: ProyectoCRAIUR/Proyecto_CRAI_UR
 
     steps:
       - name: 1. Clonar repositorio
