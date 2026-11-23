@@ -1,0 +1,10 @@
+bin/
+build/
+*.o
+*.exe
+*.tmp
+dependencias/usuarios.csv
+dependencias/prestamos.csv
+dependencias/espera.csv
+.vscode/
+.DS_Store

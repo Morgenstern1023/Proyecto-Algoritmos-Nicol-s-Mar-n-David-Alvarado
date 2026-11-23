@@ -1,0 +1,11 @@
+nombre_categoria,nombre_padre
+Libros,CRAI
+Ingenieria,Libros
+Bases de Datos,Ingenieria
+Ciencias Basicas,Libros
+General,Libros
+Algoritmos,Libros
+Tecnologia,CRAI
+Equipos de Computo,Tecnologia
+Espacios,CRAI
+Espacios Colaborativos,Espacios

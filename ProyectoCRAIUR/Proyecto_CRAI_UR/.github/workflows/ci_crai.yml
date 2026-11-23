@@ -1,0 +1,39 @@
+# @file ci_crai.yml
+# @brief Pipeline CI de GitHub Actions con compilación g++ y AddressSanitizer.
+# @author Oscar David Alvarado Navarrete (DA)
+name: CI - Build & Memory Sanitizer (CRAI C++)
+
+on:
+  push:
+    branches: [ "main", "master", "develop" ]
+  pull_request:
+    branches: [ "main", "master" ]
+
+jobs:
+  build-and-test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: 1. Clonar repositorio
+        uses: actions/checkout@v4
+
+      - name: 2. Instalar dependencias (g++, OpenSSL, nlohmann-json y curl)
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y build-essential libssl-dev nlohmann-json3-dev curl
+
+      - name: 3. Descargar cabecera cpp-httplib (solo si no está versionada)
+        run: |
+          if [ ! -f include/httplib.h ]; then
+            curl -fsSL https://raw.githubusercontent.com/yhirose/cpp-httplib/master/httplib.h -o include/httplib.h
+          fi
+
+      - name: 4. Compilar servidor principal y suite de pruebas con AddressSanitizer
+        run: |
+          make SANITIZE=1
+          make test SANITIZE=1
+
+      - name: 5. Ejecutar pruebas unitarias (Cero Fugas de Memoria)
+        env:
+          ASAN_OPTIONS: "detect_leaks=1:abort_on_error=1"
+        run: ./bin/tests_crai
