@@ -1,0 +1,8 @@
+bin/
+build/
+*.o
+*.exe
+*.tmp
+include/httplib.h
+.vscode/
+.DS_Store

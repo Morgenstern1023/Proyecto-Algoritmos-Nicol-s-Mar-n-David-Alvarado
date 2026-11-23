@@ -1,0 +1,377 @@
+<!--
+  @file index.html
+  @brief Interfaz web administrativa offline del CRAI Universidad del Rosario (RQF 021).
+  @author Oscar David Alvarado Navarrete (DA)
+-->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CRAI Universidad del Rosario — Administración de Recursos</title>
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="topbar-brand">
+      <h1>CRAI — Universidad del Rosario</h1>
+      <small>Sistema Administrativo Offline de Recursos y Préstamos (C++17)</small>
+    </div>
+    <div id="barra-sesion" class="topbar-actions oculto">
+      <span id="lbl-admin" class="admin-pill"></span>
+      <button id="btn-undo" class="btn btn-ghost">Deshacer (Undo: <span id="badge-undo">0</span>)</button>
+      <button id="btn-logout" class="btn btn-accent">Cerrar Sesión</button>
+    </div>
+  </header>
+
+  <div id="notificacion" class="toast oculto"></div>
+
+  <!-- LOGIN ADMINISTRATIVO (RQF 020) -->
+  <section id="vista-login" class="login-wrap">
+    <h2>Acceso de Recepción CRAI</h2>
+    <p class="sub">Inicia sesión con tu cuenta de administrador (Escenario A).</p>
+    <form id="form-login">
+      <label class="field">Documento de Administrador
+        <input type="text" id="login-doc" placeholder="Ej. ADMIN01" required>
+      </label>
+      <label class="field">Contraseña
+        <input type="password" id="login-clave" placeholder="Contraseña administrativa" required>
+      </label>
+      <button type="submit" class="btn btn-primary" style="width:100%; margin-top:0.4rem;">Iniciar Sesión</button>
+    </form>
+    <div id="box-cooldown" class="detail-box oculto" style="border-left-color:#991b1b; background:#fee2e2; color:#991b1b;">
+      Cuenta en cooldown de seguridad. Tiempo restante: <strong id="lbl-cooldown-seg">0</strong>s.
+    </div>
+    <div class="login-foot">
+      Tras 3 intentos fallidos se activa un cooldown de 60 segundos. Desbloqueo de emergencia por terminal local:
+      <code>./bin/crai_server --unlock ADMIN01</code>
+    </div>
+  </section>
+
+  <!-- APLICACIÓN PRINCIPAL -->
+  <div id="vista-app" class="app-shell oculto">
+    <nav class="sidebar" id="nav-sidebar">
+      <button data-tab="tab-dashboard" class="activo">Indicadores</button>
+      <button data-tab="tab-inventario">Inventario</button>
+      <button data-tab="tab-prestamos">Préstamos y Turnos</button>
+      <button data-tab="tab-usuarios">Usuarios y Sanciones</button>
+      <button data-tab="tab-categorias">Categorías</button>
+      <button data-tab="tab-sedes">Sedes y Rutas BFS</button>
+      <button data-tab="tab-historial">Historial Completo</button>
+    </nav>
+
+    <main class="content">
+      <!-- 1. INDICADORES (RQF 017) -->
+      <section id="tab-dashboard" class="panel-tab">
+        <div class="kpi-grid" id="kpi-contenedor"></div>
+        <div class="card">
+          <div class="card-title"><span>Top 5 Recursos Más Prestados (Bucket Sort)</span></div>
+          <div class="tabla-wrap">
+            <table>
+              <thead><tr><th>Código</th><th>Nombre</th><th>Tipo</th><th>Sede</th><th>Estado</th><th>Préstamos</th></tr></thead>
+              <tbody id="tbody-top"></tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      <!-- 2. INVENTARIO -->
+      <section id="tab-inventario" class="panel-tab oculto">
+        <div class="grid-2">
+          <div class="card">
+            <div class="card-title"><span>Búsqueda Instantánea O(1) — Tabla Hash (RQF 010)</span></div>
+            <form id="form-buscar-rec" class="inline-row">
+              <input type="text" id="buscar-rec-cod" placeholder="Código exacto (ej. LIB003, COM010)" required>
+              <button type="submit" class="btn btn-primary">Buscar</button>
+            </form>
+            <div id="res-buscar-rec" class="oculto"></div>
+          </div>
+          <div class="card">
+            <div class="card-title"><span>Ordenar y Filtrar Catálogo (RQF 011)</span></div>
+            <div class="inline-row">
+              <select id="sel-orden-rec">
+                <option value="codigo">Por Código (MergeSort)</option>
+                <option value="nombre">Alfabético Nombre (Árbol AVL)</option>
+                <option value="mas_prestados">Más Prestados (BucketSort)</option>
+                <option value="antiguedad">Más Antiguos (HeapSort)</option>
+                <option value="categoria">Categoría (InsertionSort)</option>
+                <option value="estado">Estado (InsertionSort)</option>
+              </select>
+              <button id="btn-cargar-rec" type="button" class="btn btn-teal">Ordenar</button>
+            </div>
+            <div class="inline-row" style="margin-top:0.55rem;">
+              <input type="text" id="filtro-rec-vivo" placeholder="Filtro rápido por código, nombre, sede o subcategoría...">
+            </div>
+          </div>
+        </div>
+
+        <details class="card" id="det-form-rec">
+          <summary style="cursor:pointer; font-weight:700; color:var(--ur-navy);">+ Registrar o Actualizar Recurso (RQF 002 / 022)</summary>
+          <form id="form-reg-rec" style="margin-top:0.85rem;">
+            <div class="grid-3">
+              <label class="field">Código<input type="text" id="rec-cod" placeholder="Ej. LIB501" required></label>
+              <label class="field">Nombre<input type="text" id="rec-nom" placeholder="Nombre descriptivo" required></label>
+              <label class="field">Categoría
+                <select id="rec-cat">
+                  <option value="libro">Libro</option>
+                  <option value="computador">Computador</option>
+                  <option value="sala">Sala</option>
+                </select>
+              </label>
+              <label class="field">Estado
+                <select id="rec-est">
+                  <option value="disponible">disponible</option>
+                  <option value="mantenimiento">mantenimiento</option>
+                </select>
+              </label>
+              <label class="field">Sede
+                <select id="rec-sede">
+                  <option value="0">0 — Claustro</option>
+                  <option value="1">1 — Quinta de Mutis</option>
+                  <option value="2">2 — Emprendimiento y GSB</option>
+                  <option value="3">3 — Sede Norte</option>
+                  <option value="4">4 — Hospital Mayor Mederi</option>
+                </select>
+              </label>
+              <label class="field">Año Adquisición<input type="number" id="rec-anio" min="1980" max="2030" value="2026"></label>
+              <label class="field">Subcategoría<input type="text" id="rec-subcat" placeholder="Ej. Ingenieria"></label>
+              <label class="field">Detalle (Autor / SO / Capacidad)<input type="text" id="rec-detalle" placeholder="Editorial UR / Arch Linux / 8"></label>
+            </div>
+            <div class="inline-row" style="margin-top:0.6rem;">
+              <button type="submit" class="btn btn-primary">Registrar Nuevo</button>
+              <button type="button" id="btn-actualizar-rec" class="btn btn-teal">Actualizar Existente</button>
+            </div>
+          </form>
+        </details>
+
+        <div class="card">
+          <div class="card-title">
+            <span>Catálogo de Recursos</span>
+            <small id="lbl-total-rec" style="color:var(--muted);"></small>
+          </div>
+          <div class="tabla-wrap">
+            <table>
+              <thead>
+                <tr><th>Código</th><th>Nombre</th><th>Tipo</th><th>Subcategoría</th><th>Sede</th><th>Estado</th><th>Prést.</th><th>Espera</th><th>Acciones</th></tr>
+              </thead>
+              <tbody id="tbody-recursos"></tbody>
+            </table>
+          </div>
+          <div class="pager">
+            <span id="lbl-pag-rec"></span>
+            <div class="inline-row">
+              <button type="button" id="btn-prev-rec" class="btn btn-outline btn-sm">Anterior</button>
+              <button type="button" id="btn-next-rec" class="btn btn-outline btn-sm">Siguiente</button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 3. PRÉSTAMOS, DEVOLUCIONES Y MATRIZ -->
+      <section id="tab-prestamos" class="panel-tab oculto">
+        <div class="grid-2">
+          <div class="card">
+            <div class="card-title"><span>Aprobar Préstamo / Lista de Espera FIFO (RQF 005-008)</span></div>
+            <form id="form-prestamo">
+              <label class="field">Documento del Usuario<input type="text" id="pre-doc" placeholder="Ej. 1000123456" required></label>
+              <label class="field">Código del Recurso<input type="text" id="pre-cod" placeholder="Ej. COM002" required></label>
+              <label style="display:flex; gap:0.4rem; align-items:center; margin:0.5rem 0 0.75rem; font-size:0.84rem;">
+                <input type="checkbox" id="pre-encolar" checked> Encolar en lista de espera FIFO si está ocupado
+              </label>
+              <button type="submit" class="btn btn-primary">Registrar Préstamo</button>
+            </form>
+          </div>
+          <div class="card">
+            <div class="card-title"><span>Registrar Devolución (RQF 006)</span></div>
+            <form id="form-devolucion">
+              <label class="field">Código del Recurso a Devolver<input type="text" id="dev-cod" placeholder="Ej. COM002" required></label>
+              <button type="submit" class="btn btn-accent">Procesar Devolución</button>
+            </form>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-title"><span>Préstamos Activos (Lista Enlazada Simple)</span></div>
+          <div class="tabla-wrap">
+            <table>
+              <thead><tr><th>ID</th><th>Recurso</th><th>Usuario</th><th>Sede</th><th>Fecha Préstamo</th><th>Acción</th></tr></thead>
+              <tbody id="tbody-prestamos"></tbody>
+            </table>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-title"><span>Matriz de Disponibilidad Semanal (RQF 004 / Snapshot O(1))</span></div>
+          <div class="inline-row" style="margin-bottom:0.75rem;">
+            <input type="text" id="mat-cod" placeholder="Código Recurso (ej. COM002)">
+            <button type="button" id="btn-ver-matriz" class="btn btn-teal">Consultar Matriz</button>
+          </div>
+          <div id="contenedor-matriz" class="tabla-wrap"></div>
+        </div>
+      </section>
+
+      <!-- 4. USUARIOS -->
+      <section id="tab-usuarios" class="panel-tab oculto">
+        <div class="card">
+          <div class="card-title"><span>Búsqueda Instantánea O(1) de Usuario por Documento (RQF 010 / 026)</span></div>
+          <form id="form-buscar-usu" class="inline-row">
+            <input type="text" id="buscar-usu-doc" placeholder="Documento exacto (ej. ADMIN01)" required>
+            <button type="submit" class="btn btn-primary">Buscar Usuario</button>
+          </form>
+          <div id="res-buscar-usu" class="oculto"></div>
+        </div>
+
+        <div class="grid-2">
+          <div class="card">
+            <div class="card-title"><span>Registrar Usuario / Recepcionista (RQF 027)</span></div>
+            <form id="form-reg-usu">
+              <label class="field">Documento<input type="text" id="usu-doc" placeholder="Número de documento" required></label>
+              <label class="field">Nombre<input type="text" id="usu-nom" placeholder="Nombre" required></label>
+              <label class="field">Apellido<input type="text" id="usu-ape" placeholder="Apellido" required></label>
+              <label style="display:flex; gap:0.4rem; align-items:center; margin:0.4rem 0; font-size:0.84rem;">
+                <input type="checkbox" id="usu-es-admin"> Es Administrador (requiere contraseña)
+              </label>
+              <input type="password" id="usu-clave" placeholder="Contraseña administrativa (mín. 6 caracteres)" class="oculto" style="margin-bottom:0.6rem;">
+              <button type="submit" class="btn btn-primary">Registrar Usuario</button>
+            </form>
+          </div>
+          <div class="card">
+            <div class="card-title"><span>Actualizar Datos / Sanción (RQF 023)</span></div>
+            <form id="form-upd-usu">
+              <label class="field">Documento Existente<input type="text" id="upd-usu-doc" placeholder="Documento" required></label>
+              <label class="field">Nuevo Nombre (opcional)<input type="text" id="upd-usu-nom" placeholder="Dejar vacío para conservar"></label>
+              <label class="field">Nuevo Apellido (opcional)<input type="text" id="upd-usu-ape" placeholder="Dejar vacío para conservar"></label>
+              <label style="display:flex; gap:0.4rem; align-items:center; margin:0.5rem 0 0.75rem; font-size:0.84rem;">
+                <input type="checkbox" id="upd-usu-sanc"> Usuario Sancionado
+              </label>
+              <button type="submit" class="btn btn-teal">Guardar Cambios</button>
+            </form>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-title"><span>Padrón de Usuarios</span></div>
+          <div class="tabla-wrap">
+            <table>
+              <thead><tr><th>Documento</th><th>Nombre Completo</th><th>Rol</th><th>Estado</th><th>Acciones</th></tr></thead>
+              <tbody id="tbody-usuarios"></tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      <!-- 5. CATEGORÍAS -->
+      <section id="tab-categorias" class="panel-tab oculto">
+        <div class="grid-2">
+          <div class="card">
+            <div class="card-title"><span>Árbol Jerárquico N-ario (RQF 012)</span></div>
+            <form id="form-cat" class="inline-row" style="margin-bottom:0.75rem;">
+              <input type="text" id="cat-padre" placeholder="Padre (ej. Ingenieria)" required>
+              <input type="text" id="cat-hija" placeholder="Nueva Subcategoría" required>
+              <button type="submit" class="btn btn-primary">Crear</button>
+            </form>
+            <small style="color:var(--muted);">Haz clic en cualquier categoría para consultar su subárbol completo:</small>
+            <ul id="lista-jerarquia" class="tree-list"></ul>
+          </div>
+          <div class="card">
+            <div class="card-title"><span>Consultar Subárbol Completo — Backtracking (RQF 013)</span></div>
+            <form id="form-buscar-cat" class="inline-row">
+              <input type="text" id="cat-consulta" placeholder="Ej. Libros, Ciencias Basicas, CRAI" required>
+              <button type="submit" class="btn btn-teal">Consultar</button>
+            </form>
+            <div id="res-cat" style="margin-top:0.75rem;"></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 6. SEDES Y BFS -->
+      <section id="tab-sedes" class="panel-tab oculto">
+        <div class="card">
+          <div class="card-title">
+            <span>Red de Sedes CRAI — Universidad del Rosario (RQF 014)</span>
+            <span id="lbl-conexa" class="badge badge-info"></span>
+          </div>
+          <div id="lista-sedes" class="grid-2"></div>
+        </div>
+        <div class="grid-2">
+          <div class="card">
+            <div class="card-title"><span>Buscar Recurso Agotado en Otra Sede — BFS (RQF 015)</span></div>
+            <form id="form-bfs-rec">
+              <label class="field">Sede Origen
+                <select id="bfs-rec-origen">
+                  <option value="0">0 — Claustro</option>
+                  <option value="1">1 — Quinta de Mutis</option>
+                  <option value="2">2 — Emprendimiento y GSB</option>
+                  <option value="3">3 — Sede Norte</option>
+                  <option value="4">4 — Hospital Mayor Mederi</option>
+                </select>
+              </label>
+              <label class="field">Código del Recurso<input type="text" id="bfs-rec-cod" placeholder="Ej. COM001" required></label>
+              <label class="field">Umbral de viabilidad (metros)<input type="number" id="bfs-rec-max" value="10000"></label>
+              <button type="submit" class="btn btn-primary">Buscar vía BFS</button>
+            </form>
+            <div id="res-bfs-rec" class="oculto"></div>
+          </div>
+          <div class="card">
+            <div class="card-title"><span>Camino Más Corto entre Sedes — BFS (RQF 016)</span></div>
+            <form id="form-bfs-ruta">
+              <label class="field">Sede Origen
+                <select id="bfs-orig">
+                  <option value="0">0 — Claustro</option>
+                  <option value="1">1 — Quinta de Mutis</option>
+                  <option value="2">2 — Emprendimiento y GSB</option>
+                  <option value="3">3 — Sede Norte</option>
+                  <option value="4">4 — Hospital Mayor Mederi</option>
+                </select>
+              </label>
+              <label class="field">Sede Destino
+                <select id="bfs-dest">
+                  <option value="0">0 — Claustro</option>
+                  <option value="1">1 — Quinta de Mutis</option>
+                  <option value="2">2 — Emprendimiento y GSB</option>
+                  <option value="3" selected>3 — Sede Norte</option>
+                  <option value="4">4 — Hospital Mayor Mederi</option>
+                </select>
+              </label>
+              <button type="submit" class="btn btn-teal">Calcular Ruta Óptima</button>
+            </form>
+            <div id="res-bfs-ruta" class="oculto"></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 7. HISTORIAL -->
+      <section id="tab-historial" class="panel-tab oculto">
+        <div class="card">
+          <div class="card-title">
+            <span>Historial General — Lista Doblemente Enlazada (RQF 007)</span>
+            <div class="inline-row">
+              <button id="btn-hist-reciente" type="button" class="btn btn-primary btn-sm">Reciente → Antiguo</button>
+              <button id="btn-hist-antiguo" type="button" class="btn btn-outline btn-sm">Antiguo → Reciente</button>
+            </div>
+          </div>
+          <div class="tabla-wrap">
+            <table>
+              <thead><tr><th>Fecha y Hora</th><th>Evento</th><th>Recurso</th><th>Usuario</th><th>Detalle</th></tr></thead>
+              <tbody id="tbody-historial"></tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <!-- MODAL HISTORIAL INDIVIDUAL (RQF 007) -->
+  <div id="modal-hist" class="modal-backdrop oculto">
+    <div class="modal-card">
+      <div class="card-title">
+        <span id="modal-hist-titulo">Historial Individual</span>
+        <button type="button" id="btn-cerrar-modal" class="btn btn-outline btn-sm">Cerrar</button>
+      </div>
+      <div id="modal-hist-body"></div>
+    </div>
+  </div>
+
+  <script src="/app.js"></script>
+</body>
+</html>
